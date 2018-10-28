@@ -1,0 +1,79 @@
+@import "../settings/colors"
+
+*
+  box-sizing border-box
+  -moz-box-sizing border-box
+  -webkit-box-sizing border-box
+  color $black
+
+html, body, header, main, nav, footer, article, blockquote,
+div, section, span, iframe, img, video, figure, a, p, h1, h2,
+h3, h4, h5, h6, strong, b, i, ul, ol, li, form, fieldset,
+label, input, input:focus, select, select:focus, textarea, textarea:focus, table, button, thead, tbody, tfoot,
+th, td, tr, aside, caption, sup, sub, q, small
+	padding 0
+	margin 0
+	border 0
+	text-decoration none
+
+textarea
+	font-family "Lato", sans-serif
+
+a
+	text-decoration none
+
+input:focus
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+select:focus
+textarea:focus
+button:focus
+	outline none
+	shadow-box none
+
+html
+	font-family "Lato", sans-serif
+	width 100%
+
+body
+	line-height 1
+	width 100%
+	overflow-x hidden
+
+ol
+ul
+	list-style none
+
+blockquote
+	quotes none
+
+blockquote:after
+blockquote:before
+	content ""
+	content none
+
+table
+	border-collapse collapse
+	border-spacing 0
+
+@font-face {
+    font-family: backFromTheDead;
+    src: url(/assets/fonts/Back-from-the-Dead.ttf);
+}
+
+::-webkit-scrollbar-track
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  border-radius: 10px;
+  background-color: #F5F5F5;
+
+::-webkit-scrollbar
+  width: 14px;
+  background-color: #F5F5F5;
+
+::-webkit-scrollbar-thumb
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+  background-color: #E7E7E7;

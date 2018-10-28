@@ -1,0 +1,58 @@
+@import "../../stylesheets/settings/colors"
+@import "../../stylesheets/tools/animations/fade"
+@import "../../stylesheets/tools/shadow"
+
+.tooltip-container
+	position relative
+	cursor default
+
+	.tooltip
+		shadow()
+		transition-delay .2s
+		position absolute
+		padding 15px
+		font-size .8rem
+		letter-spacing 1px
+		color $black
+		border-radius 5px
+		background-color white
+		display none
+		z-index 100
+		&.-right
+			top -7.5px
+			left calc(100% + 15px)
+		&.-left 
+			top -7.5px
+			right calc(100% + 15px)
+		&.-top
+			left calc(50% - 10px)
+			bottom calc(100% + 15px)
+		&.-bottom
+			left calc(50% - 10px)
+			top calc(100% + 15px)
+			
+	> svg.tooltip-arrow
+		position absolute
+		height 10px
+		width 10px
+		display none
+		&.-right
+			top calc(50% - 5px)
+			left calc(100% + 5px)
+			transform rotateZ(90deg)
+		&.-left 
+			top calc(50% - 5px)
+			right calc(100% + 5px)
+			transform rotateZ(-90deg)
+		&.-top
+			left calc(50% - 5px)
+			bottom calc(100% + 5px)
+		&.-bottom
+			left calc(50% - 5px)
+			top calc(100% + 5px)
+			transform rotateZ(180deg)
+	&:hover
+		svg.tooltip-arrow
+		.tooltip
+			display block
+			fade("in")

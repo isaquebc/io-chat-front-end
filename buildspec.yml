@@ -1,0 +1,24 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - echo Logging in to Amazon ECR
+      - $(aws ecr get-login --region $AWS_DEFAULT_REGION --no-include-email)
+      - REPOSITORY_URI=$REPOSITORY_URI
+  build:
+    commands:
+      - echo Build started on `date`
+      - echo Building the Docker image...
+      - docker build --build-arg  NODE_ENV=$NODE_ENV --build-arg API_ENDPOINT=$API_ENDPOINT --build-arg PAYPAL_CLIENT_ID=$PAYPAL_CLIENT_ID --build-arg PAGARME_TOKEN=$PAGARME_TOKEN --build-arg UA_ANALYTICS=$UA_ANALYTICS --build-arg GOOGLE_GEOCODE_KEY=$GOOGLE_GEOCODE_KEY -t permuta-console-v3:$NODE_ENV .
+      - docker tag permuta-console-v3:$NODE_ENV $REPOSITORY_URI:$NODE_ENV
+  post_build:
+    commands:
+      - echo Build completed on `date`
+      - docker push $REPOSITORY_URI:$NODE_ENV
+      - echo Changing the Dockerrun file to the correct for this environment
+      - sed -i 's/DUMMY_ENV/'$NODE_ENV'/g' Dockerrun.aws.json
+artifacts:
+  files:
+    - Dockerrun.aws.json
+    - .ebextensions/*

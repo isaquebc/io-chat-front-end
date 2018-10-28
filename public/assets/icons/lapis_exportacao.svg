@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="11px" height="11px" viewBox="0 0 11 11" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>ic_edit</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="card-inativos" transform="translate(-601.000000, -14.000000)" stroke="#4A4A4A" stroke-width="2">
+            <g id="ic_edit" transform="translate(599.000000, 13.000000)">
+                <g id="edit" transform="translate(7.000000, 7.353553) rotate(-315.000000) translate(-7.000000, -7.353553) translate(5.000000, 1.853553)">
+                    <polygon id="Rectangle" stroke-linecap="round" stroke-linejoin="round" points="8.8817842e-14 1.43884904e-13 3.5 1.43884904e-13 3.5 8.16666667 1.75 10.5 8.8817842e-14 8.16666667"></polygon>
+                    <path d="M-2.32702746e-13,2.33333333 L3.5,2.33333333" id="Line" stroke-linecap="square"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

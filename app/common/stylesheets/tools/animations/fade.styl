@@ -1,0 +1,35 @@
+fade($name = "in", $duration = .5s, $delay = 0s, $count = 1) {
+	if $name == "in"{
+		opacity 1
+	}
+	
+	if $name == "out" {
+		opacity 0
+	}
+		
+	animation-name $name
+	animation-duration $duration
+	animation-delay $delay
+	animation-iteration-count $count
+}
+
+@keyframes in
+	from 
+		opacity 0
+	to
+		opacity 1 
+		
+@keyframes out
+	from 
+		opacity 1
+	to
+		opacity 0 
+		
+@keyframes loading
+	0% 
+		opacity 1
+	50%
+		opacity 0
+	100%
+		opacity 1
+	
